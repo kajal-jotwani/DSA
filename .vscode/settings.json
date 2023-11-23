@@ -1,6 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "pivot_q3,cpp": "cpp"
     }
 }
