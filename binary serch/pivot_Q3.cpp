@@ -28,7 +28,7 @@ int pivot(int arr[], int size){
 
 int main()
     {
-        int array[6]={1,7,3,6,5,6};
+        int array[5]={3,8,10,17,1};
 
-       cout<<"pivot is"<<pivot(array,6)<<endl;
+       cout<<"pivot is"<<pivot(array,5)<<endl;
     }
