@@ -5,6 +5,8 @@
         "pivot_q3,cpp": "cpp",
         "typeinfo": "cpp",
         "typeindex": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "vector": "cpp",
+        "ratio": "cpp"
     }
 }
