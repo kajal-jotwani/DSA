@@ -1,1 +1,1 @@
-6
+print(arr,index+1,n);
