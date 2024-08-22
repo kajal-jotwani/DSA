@@ -61,17 +61,19 @@ void Reverse1(Node *p) {
 
     delete[] A;
 }
-
 void Reverse2(Node *p) {
     Node *q = nullptr, *r = nullptr;
+    
     while (p != nullptr) {
-        r = q;
-        q = p;
-        p = p->next;
-        q->next = r;
+        r = q;       
+        q = p;       
+        p = p->next; 
+        q->next = r; 
     }
-    first = q;
+    
+    first = q;  
 }
+
 
 void Reverse3(Node *q, Node *p) {
     if (p) {
