@@ -1,2 +1,2 @@
-    std::cout << "Linked list: ";
-    display(head);
+Concat(first, second);
+    // Display(third);
