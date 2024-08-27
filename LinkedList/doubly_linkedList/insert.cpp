@@ -66,14 +66,6 @@ void Insert(Node* p, int index, int x) {
     }
 }
 
-void Display(Node* p) {
-    while (p) {
-        cout << p->data << " ";
-        p = p->next;
-    }
-    cout << endl;
-}
-
 int Length(Node* p) {
     int len = 0;
     while (p) {
@@ -83,11 +75,53 @@ int Length(Node* p) {
     return len;
 }
 
+int Delete(Node* p, int index){
+    Node* q;
+    int x = -1;
+
+    if( index < 1 || index > Length(p)){
+        return -1;
+    }
+
+    if(index == 1){
+        first = first-> next;
+        if(first){
+            first-> prev = NULL;
+        }
+        x = p-> data;
+        free(p);
+    }
+
+    else{
+        for(int i = 0; i < index - 1; i++){
+            p = p-> next;
+        }
+         p-> next-> prev = p-> next;
+            if(p-> next){
+                p-> next -> prev = p-> prev;
+            }
+        x = p-> data;
+        free(p);
+    }
+    return x;
+} 
+
+void Display(Node* p) {
+    while (p) {
+        cout << p->data << " ";
+        p = p->next;
+    }
+    cout << endl;
+}
+
+
 int main() {
     int A[] = {2, 4, 6, 8, 3, 7};
     create(A, 6);
 
     Insert(first, 3, 9);
+    Delete(first, 1);
+
 
     cout << "Length: " << Length(first) << endl;
     cout << "List: ";
