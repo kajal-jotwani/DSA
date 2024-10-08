@@ -3,11 +3,11 @@
 using namespace std;
 
 void bubblesort(int arr[], int n){
-    bool swapped=false;
     for(int i=0; i<n-1; i++){
-        for(int j=i+1; j<n; j++){
-            if(arr[j]<arr[i]){
-                 swap(arr[j],arr[i]);
+        bool swapped=false;
+        for(int j=0; j<n-i-1; j++){
+            if(arr[j]>arr[j+1]){
+                 swap(arr[j],arr[j+1]);
                  swapped=true;
             }
         }
@@ -26,7 +26,7 @@ void printarray(int arr[], int size){
 
 int main()
 {
-    int arr[]={22,4,34,1,8,5};
+    int arr[]={64, 34, 25, 12, 22, 11, 90};
     int n= sizeof(arr)/sizeof(arr[0]);
     bubblesort(arr,n);
      printarray(arr,n);
